@@ -13,47 +13,11 @@
 
 <body>
     <div id="root">
-        <header id="header" style="box-shadow: 0 0 2px #999;">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="../index.html">
-                            <img src="../assets/logoBlack.png" style="width: 180px;" alt="">
-                        </a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3" style="font-size: 14px;">
-                                <li class="nav-item">
-                                    <a class="nav-link header-link active position-relative text-bold text-uppercase"
-                                        aria-current="page" href="#">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link header-link position-relative text-bold text-uppercase"
-                                        aria-current="page" href="#">Services</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link header-link position-relative text-bold text-uppercase"
-                                        aria-current="page" href="#">Collection</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link header-link position-relative text-bold text-uppercase"
-                                        aria-current="page" href="#">FAQs</a>
-                                </li>
-                            </ul>
-                            <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" aria-current="page"
-                                href="./pages/cart.html">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span id="cart-products-count" style="color: #09ff00;">0</span>
-                            </a>
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </header>
+        <div class="my-container py-3">
+            <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" style="width: fit-content;" aria-current="page" href="../index.html">
+                Home
+            </a>
+        </div>
 
         <section id="cart" class="py-5">
             <div class="container">
@@ -85,8 +49,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="total-container">
-                    <h3>Total Price: <span id="total-price"></span></h3>
+                <div class="total-container mt-5">
+                    <h3 class="py-2 px-1" style="background-color: #ff5e0041;">Total Price: <span id="total-price"></span>
+                    </h3>
                 </div>
             </div>
         </section>
