@@ -13,11 +13,11 @@
 
 <body>
     <div id="root" class="mx-auto">
-        <header id="header" style="box-shadow: 0 0 2px #999;">
+        <header id="header" class="position-sticky top-0 bg-white" style="box-shadow: 0 0 2px #999; z-index: 1000;">
             <div class="my-container">
                 <nav class="navbar navbar-expand-lg">
                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#header">
+                        <a class="navbar-brand" href="#banner">
                             <img src="./assets/logoBlack.png" style="width: 180px;" alt="">
                         </a>
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -29,7 +29,7 @@
                             <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-3" style="font-size: 14px;">
                                 <li class="nav-item">
                                     <a class="nav-link header-link active position-relative text-bold text-uppercase"
-                                        aria-current="page" href="#header">Home</a>
+                                        aria-current="page" href="#banner">Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link header-link position-relative text-bold text-uppercase"
@@ -44,11 +44,15 @@
                                         aria-current="page" href="#faq">FAQs</a>
                                 </li>
                             </ul>
-                            <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" aria-current="page"
-                                href="./pages/cart.html">
-                                <i class="fa fa-shopping-cart"></i>
-                                <span id="cart-products-count" style="color: #09ff00;">0</span>
-                            </a>
+                            <div class="header-buttons d-flex gap-3">
+                                <!-- <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" aria-current="page"
+                                    href="./pages/register.html">Register</a> -->
+                                <!-- <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" aria-current="page"
+                                    href="./pages/cart.html">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span id="cart-products-count" style="color: #09ff00;">0</span>
+                                </a> -->
+                            </div>
                         </div>
                     </div>
                 </nav>
@@ -56,21 +60,48 @@
         </header>
 
         <main id="main">
-            <section id="banner">
-                <div class="my-container pt-5">
-                    <div class="banner-images" style="height: 400px;">
-                        <div class="banner-img h-100">
-                            <img src="./assets/rollsRoyce.jpg" class="rounded-4 w-100 h-100" style="object-fit: cover;"
-                                alt="">
+            <section id="banner" class="pt-5">
+                <div class="my-container">
+                    <div class="carousel position-relative overflow-hidden" style="height: 400px;">
+                        <div class="banner-images d-flex position-absolute h-100"
+                            style="left: 0; width: 700%; transition: all .5s ease;">
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsroyce.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsRoyce1.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsRoyce2.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsRoyce3.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsRoyce4.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsRoyce5.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
+                            <div class="banner-img h-100" style="width: 33.3333333333%;">
+                                <img src="./assets/rollsroyce6.png" class="rounded-4 w-100 h-100"
+                                    style="object-fit: cover;" alt="">
+                            </div>
                         </div>
                     </div>
                     <div class="pagination p-2 d-flex justify-content-between rounded-5 mt-3"
                         style="background-color: #ddd;">
-                        <button id="previous" class="text-white bg-black rounded-circle border-0"
+                        <button id="previous-btn" class="text-white bg-black rounded-circle border-0"
                             style="width: 30px; height: 30px;">
                             <i class="fas fa-chevron-left"></i>
                         </button>
-                        <button id="previous" class="text-white bg-black rounded-circle border-0"
+                        <button id="next-btn" class="text-white bg-black rounded-circle border-0"
                             style="width: 30px; height: 30px;">
                             <i class="fas fa-chevron-right"></i>
                         </button>
@@ -81,8 +112,9 @@
             <section id="discount">
                 <div class="my-container d-flex">
                     <div class="col-6 p-5 ps-0 d-flex align-items-center" style="border-right: 2px solid #ddd;">
-                        <h1 class="text-uppercase fw-bold mb-0">Choose your stylish <br> <span class="text-orange">car
-                                and get discount</span></h1>
+                        <h2 class="text-uppercase fw-bolder mb-0 fs-1 ff-chonburi">Choose your stylish <br> <span
+                                class="text-orange">car
+                                and get discount</span></h2>
                     </div>
                     <div class="col-6 p-5 pe-0" style="border-left: 2px solid #ddd;">
                         <p class="text-bold mb-0" style="font-size: 14px; color: gray;">Lorem ipsum dolor sit amet
@@ -94,39 +126,51 @@
                 </div>
             </section>
 
-            <div class="links-slider d-flex align-items-center gap-5 overflow-hidden mb-5"
-                style="height: 80px; background-color: #212121; color: #999;">
-                <h5 class="mb-0">Behance</h5>
-                <h5 class="mb-0">Facebook</h5>
-                <h5 class="mb-0">Behance</h5>
-                <h5 class="mb-0">Facebook</h5>
-                <h5 class="mb-0">Behance</h5>
-                <h5 class="mb-0">Facebook</h5>
-                <h5 class="mb-0">Behance</h5>
-                <h5 class="mb-0">Facebook</h5>
-                <h5 class="mb-0">Behance</h5>
-                <h5 class="mb-0">Facebook</h5>
+            <div class="links-slider-container overflow-hidden position-relative" style="background-color: #212121;">
+                <div class="links-slider d-flex align-items-center gap-5" style="height: 80px;">
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Behance</a></h5>
+                    <h5 class="mb-0"><a href="" style="text-decoration: none; color: #999;">Facebook</a></h5>
+                </div>
             </div>
+
 
             <section id="services" class="pt-5 d-flex">
                 <div class="col-4">
                     <div class="service-img h-100">
-                        <img src="./assets/rollsRoyce1.webp" class="w-100 h-100"
+                        <img src="./assets/service.webp" class="w-100 h-100"
                             style="border-radius: 0 15px 15px 0; object-fit: cover;" alt="">
                     </div>
                 </div>
                 <div class="col-8">
                     <div class="service-content ps-4 pe-5">
-                        <h1 class="text-uppercase fw-bold">We have creative services for you</h1>
+                        <h2 class="text-uppercase fw-bolder ff-chonburi">We have creative services for you</h2>
                         <p class="text-gray text-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo
                             iste ad mollitia sapiente nesciunt cum, sed officiis minus. Veniam, rem! Veniam, rem!
                             Veniam, rem! Veniam, rem! Veniam, rem! Veniam, rem</p>
                         <div class="service-cards d-flex gap-3 flex-wrap">
-                            <div class="service-card rounded-3 p-4 text-white"
-                                style="background-color: #212121; width: 400px;">
+                            <div class="service-card rounded-3 p-4 text-black bg-white"
+                                style="width: 400px; box-shadow: 0 0 2px #999;">
                                 <h6 class="d-flex align-items-center">
                                     <span
-                                        class="me-2 bg-orange rounded-circle d-flex justify-content-center align-items-center"
+                                        class="me-2 bg-black text-white rounded-circle d-flex justify-content-center align-items-center"
                                         style="width: 40px; height: 40px;">1</span>
                                     Deals for every budget
                                 </h6>
@@ -180,7 +224,7 @@
             </section>
 
             <section id="products" class="py-5">
-                <h2 class="text-uppercase text-center fw-bold">Explore your dream cars</h2>
+                <h2 class="text-uppercase text-center fw-bold ff-chonburi">Explore your dream cars</h2>
                 <p class="text-center mx-auto mb-5 text-gray" style="max-width: 900px; font-size: 14px;">Lorem ipsum
                     dolor sit amet consectetur adipisicing elit. Quidem itaque temporibus ullam voluptatum rem nemo
                     ratione facere. Nesciunt dolores deserunt distinctio? Illo vero laboriosam officia et qui pariatur
@@ -192,26 +236,28 @@
             </section>
 
             <section id="faq" class="bg-black py-5 text-white">
-                <h2 class="text-uppercase text-center fw-bold">Subscribe to our newsletter</h2>
+                <h2 class="text-uppercase text-center fw-bold ff-chonburi">Frequently asked questions</h2>
                 <p class="text-center mx-auto mb-5 text-gray" style="max-width: 900px; font-size: 14px;">Lorem ipsum
                     dolor sit amet consectetur adipisicing elit. Quidem itaque temporibus ullam voluptatum rem nemo
                     ratione facere. Nesciunt dolores deserunt distinctio? Illo vero laboriosam officia et qui
                     pariatur natus neque nemo doloremque.</p>
                 <div class="my-container d-flex">
                     <div class="col-4">
-                        <div class="catagory mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
+                        <div id="faq-catagory"
+                            class="mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
+                            style="background-color: #fff; color: #212121;">
                             <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
+                            <button id="previous" class="rounded-circle border-0"
+                                style="width: 30px; height: 30px; background-color: #212121; color: #fff;">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
-                        <div class="catagory mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
+                        <div id="support-team-catagory"
+                            class="mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
                             style="background-color: #333333;">
                             <p class="mb-0 text-bold">Our Support Team</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
+                            <button id="previous" class="rounded-circle border-0"
+                                style="width: 30px; height: 30px; background-color: #fff; color: #212121;">
                                 <i class="fas fa-chevron-right"></i>
                             </button>
                         </div>
@@ -220,68 +266,261 @@
                                 style="width: 50px; height: 50px;"></i>
                             <p class="mb-0 text-bold">You have different questions?</p>
                             <p class="mb-0 text-gray" style="font-size: 13px;">Our team will answer all your questions.
-                                <br>We ensure a quick response</p>
+                                <br>We ensure a quick response
+                            </p>
                             <button
                                 class="bg-orange border-0 px-3 py-2 rounded-2 text-white position-relative mt-3 text-uppercase"
                                 style="font-size: 15px;">Contact support team</button>
                         </div>
                     </div>
                     <div class="col-8 ps-5">
-                        <div class="question mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
-                            <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                        <div id="faq-questions">
+                            <div class="question mb-3 rounded-3 py-2 px-3 overflow-hidden"
+                                style="background-color: #333333; height: 45px;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 text-bold">What is REDFELLA, and how does it work?</p>
+                                    <button class="question-btn text-black bg-white rounded-circle border-0"
+                                        style="width: 30px; height: 30px;">
+                                        <i class="btn-icon fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <p class="mb-0 mt-3" style="font-size: 13px;">REDFELLA is a car bargain platform that
+                                    helps you find stylish, well-maintained cars at competitive prices. Simply choose
+                                    your preferred car, apply filters, and explore available deals — no hidden fees, no
+                                    pressure.</p>
+                            </div>
+                            <div class="question mb-3 rounded-3 py-2 px-3 overflow-hidden"
+                                style="background-color: #333333; height: 45px;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 text-bold">Are the cars inspected before listing?</p>
+                                    <button class="question-btn text-black bg-white rounded-circle border-0"
+                                        style="width: 30px; height: 30px;">
+                                        <i class="btn-icon fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <p class="mb-0 mt-3" style="font-size: 13px;">Yes! Every car listed on REDFELLA goes
+                                    through a detailed inspection process to ensure it meets our quality standards in
+                                    terms of engine, body condition, documents, and mileage.</p>
+                            </div>
+                            <div class="question mb-3 rounded-3 py-2 px-3 overflow-hidden"
+                                style="background-color: #333333; height: 45px;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 text-bold">Is there any return or refund policy?</p>
+                                    <button class="question-btn text-black bg-white rounded-circle border-0"
+                                        style="width: 30px; height: 30px;">
+                                        <i class="btn-icon fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <p class="mb-0 mt-3" style="font-size: 13px;">We offer a 3-day return window for
+                                    eligible deals. If you're not satisfied or the car doesn’t match the description,
+                                    you can report it through your account dashboard, and our support team will assist
+                                    you immediately.</p>
+                            </div>
+                            <div class="question mb-3 rounded-3 py-2 px-3 overflow-hidden"
+                                style="background-color: #333333; height: 45px;">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p class="mb-0 text-bold">Can I negotiate the price?</p>
+                                    <button class="question-btn text-black bg-white rounded-circle border-0"
+                                        style="width: 30px; height: 30px;">
+                                        <i class="btn-icon fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <p class="mb-0 mt-3" style="font-size: 13px;">Absolutely. REDFELLA is built around the
+                                    idea of smart bargaining. You can make offers directly through the platform, and our
+                                    sellers respond quickly with fair counter-offers.</p>
+                            </div>
                         </div>
-                        <div class="question mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
-                            <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="question mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
-                            <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="question mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
-                            <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
-                                <i class="fas fa-plus"></i>
-                            </button>
-                        </div>
-                        <div class="question mb-3 d-flex justify-content-between align-items-center rounded-3 py-2 px-3"
-                            style="background-color: #333333;">
-                            <p class="mb-0 text-bold">General Questions</p>
-                            <button id="previous" class="text-black bg-white rounded-circle border-0"
-                                style="width: 30px; height: 30px;">
-                                <i class="fas fa-plus"></i>
-                            </button>
+                        <div id="support-team" class="gap-3 flex-wrap" style="display: none;">
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/IsrarAhmadTech.png" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">Israr Ahmad</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Customer Support Manager</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/abuzar.jpg" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">Abuzar Afridi</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Live Chat Agent</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/osama.jpg" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">Sir M Osama</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Technical Operations Lead</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/rafi.jpg" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">M Rafi</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Feedback & Quality Analyst</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/wahab.jpg" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">Wahab Afridi</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Order Tracking Assistant</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="support-team-card rounded-4 text-center p-3 card-shadow"
+                                style="width: 220px; background-color: #000;">
+                                <div class="card-photo mx-auto" style="width: 80px; height: 80px;">
+                                    <img src="./assets/abdullah.jpg" alt="" style="object-fit: cover; border: 2px solid #212121;"
+                                        class="w-100 h-100 rounded-circle">
+                                </div>
+                                <div class="card-content">
+                                    <h5 class="text-bold mt-3">Sir Abdullah</h4>
+                                    <p class="text-bold text-primary-teal mb-0" style="font-size: 13px;">Technical Support Specialist</p>
+                                    <div class="d-flex gap-2 justify-content-center">
+                                        <a href="#">
+                                            <i class="fab fa-facebook-f text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-linkedin-in text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-github text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fab fa-twitter text-white fs-6 bg-primary-teal rounded-circle d-flex justify-content-center align-items-center"
+                                                style="width: 40px; height: 40px;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="news-letter">
-                <div class="my-container p-5 card-shadow rounded-4 position-relative bg-white" style="bottom: -100px;">
-                    <h2 class="text-uppercase text-center fw-bold">Subscribe to our newsletter</h2>
+            <section id="news-letter" style="background-color: #ddddddd5;">
+                <div class="my-container p-5 card-shadow rounded-4 position-relative bg-white" style="bottom: -140px;">
+                    <h2 class="text-uppercase text-center fw-bold ff-chonburi">Subscribe to our newsletter</h2>
                     <p class="text-center mx-auto mb-5 text-gray" style="max-width: 900px; font-size: 14px;">Lorem ipsum
                         dolor sit amet consectetur adipisicing elit. Quidem itaque temporibus ullam voluptatum rem nemo
                         ratione facere. Nesciunt dolores deserunt distinctio? Illo vero laboriosam officia et qui
                         pariatur natus neque nemo doloremque.</p>
-                    <form action="" class="text-center rounded-3 card-shadow d-flex">
-                        <input class="p-2 ps-3 border-0 rounded-3" style="width: 85%; outline: none;" type="email"
+                    <form action="" onsubmit="newsLetterForm(event)" class="text-center rounded-3 card-shadow d-flex">
+                        <input class="p-2 ps-3 border-0 rounded-3" required name="email" style="width: 85%; outline: none;" type="email"
                             placeholder="Enter your email address here..">
-                        <button class="border-0 text-bold m-2 p-2 rounded-2 bg-orange text-white"
+                        <button class="border-0 text-bold m-2 py-2 rounded-2 bg-orange text-white"
                             style="width: 15%; font-size: 14px;">SUBSCRIBE NOW</button>
                     </form>
                 </div>
@@ -293,12 +532,16 @@
                         <img src="./assets/logoWhite.png" style="width: 180px;" alt="">
                     </a>
                     <ul style="list-style-type: none;" class="d-flex gap-5 mb-0">
-                        <li><a href="#header" class="text-white text-uppercase text-bold text-decoration-none">Home</a></li>
-                        <li><a href="#services" class="text-white text-uppercase text-bold text-decoration-none">Services</a>
+                        <li><a href="#header" class="text-white text-uppercase text-bold text-decoration-none">Home</a>
                         </li>
-                        <li><a href="#products" class="text-white text-uppercase text-bold text-decoration-none">Collection</a>
+                        <li><a href="#services"
+                                class="text-white text-uppercase text-bold text-decoration-none">Services</a>
                         </li>
-                        <li><a href="#gaq" class="text-white text-uppercase text-bold text-decoration-none">FAQS</a></li>
+                        <li><a href="#products"
+                                class="text-white text-uppercase text-bold text-decoration-none">Collection</a>
+                        </li>
+                        <li><a href="#gaq" class="text-white text-uppercase text-bold text-decoration-none">FAQS</a>
+                        </li>
                     </ul>
                     <div class="footer-links d-flex gap-3">
                         <a href=""

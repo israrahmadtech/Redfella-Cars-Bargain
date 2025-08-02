@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDFELLA | Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div id="root">
+        <div class="my-container pt-3">
+            <a class="nav-link rounded-3 text-white px-3 py-2 bg-orange" style="width: fit-content;" aria-current="page"
+                href="../index.html">
+                Home
+            </a>
+        </div>
+        <section id="login" class="d-flex align-items-center mt-5">
+            <div class="form-container mx-auto p-4 rounded-3" style="width: 400px; box-shadow: 0 0 2px gray;">
+                <h4 class="text-center mb-4">Login</h4>
+                <form class="form" action="" onsubmit="loginForm(event)">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="email" required id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" required id="exampleInputPassword1">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                    </div>
+                    <button class="bg-orange text-white border-0 rounded-3 px-3 py-2">Submit</button>
+                    <p class="mb-0 mt-3">Already have an account <a href="./register.html"
+                            class="text-decoration-none ms-2">Register</a></p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

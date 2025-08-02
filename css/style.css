@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Great+Vibes&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Chonburi&family=Great+Vibes&family=New+Rocker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 *{
     padding: 0;
@@ -16,6 +16,10 @@ body{
 .my-container{
     width: 90%;
     margin: 0 auto;
+}
+
+.ff-chonburi{
+    font-family: "Chonburi", serif !important;
 }
 /* ..............  Utilties */
 .text-gray{
@@ -93,8 +97,82 @@ input[type=number] {
 }
 /* ..................  Header End  ...................... */
 
-/* ..................  Header Start  ...................... */
-/* #banner{
-    height: 400px;
-} */
-/* ..................  Header End  ...................... */
+/* ..................  Banner Start  ...................... */
+#banner .carousel{
+    background-image: url(../assets/grayBg.jpeg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+/* ..................  Banner End  ...................... */
+
+/* ..................  Links Slider Start  ...................... */
+.links-slider{
+    white-space: nowrap;
+    animation: scrollLinks 20s linear infinite;
+}
+@keyframes scrollLinks {
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+}
+/* ..................  Links Slider End  ...................... */
+
+/* ..................  Service Card Start  ...................... */
+.service-card,
+.service-card h6,
+.service-card span{
+    transition: all .5s;
+}
+.service-card:hover{
+    background-color: #212121 !important;
+}
+.service-card:hover h6{
+    color: #fff !important;
+}
+.service-card:hover h6 span{
+    background-color: #f87529 !important;
+}
+/* ..................  Service Card End  ...................... */
+
+/* ..................  faq start  ...................... */
+#faq .question,
+#faq .question > p,
+#faq .question .question-btn{
+    transition: all .3s ease !important;
+}
+#faq .question.show-question{
+    height: 105px !important;
+    background-color: #fff !important;
+    color: #212121;
+}
+#faq .question.show-question > p{
+    color: #666;
+}
+#faq .question.show-question .question-btn{
+    background-color: #212121 !important;
+    color: #fff !important;
+    animation: rotateQuestionBtn .3s linear forwards;
+}
+@keyframes rotateQuestionBtn {
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(180deg); }
+}
+
+.support-team-card{
+    transition: all .3s ease;
+}
+.support-team-card a{
+    text-decoration: none;
+    i{
+        transition: all .3s ease;
+    }
+}
+.support-team-card:hover{
+    background-color: #fff !important;
+    color: #000;
+    a i{
+        color: #000 !important;
+    }
+}
+/* ..................  faq End  ...................... */
